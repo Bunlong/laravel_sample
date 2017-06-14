@@ -11,6 +11,7 @@
       <thead>
         <tr>
           <th>#</th>
+          <th>Image</th>
           <th>Title</th>
           <th>Price</th>
           <th>Action</th>
@@ -20,6 +21,7 @@
         @foreach($books as $book)
           <tr>
             <td>{{$book->id}}</td>
+            <td><img src={{$book->image}} class="thumbnail col-xs-4 col-md-2" /></td>
             <td>{{$book->title}}</td>
             <td>$ {{$book->price}}</td>
             <td>

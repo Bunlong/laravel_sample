@@ -19,6 +19,11 @@
     ]) !!}
 
       <div class="form-group">
+        {!! Form::file('image') !!}
+        {!!$errors->first('image')!!}
+      </div>
+
+      <div class="form-group">
         {!! Form::label('title', 'Title:', ['class' => 'control-label']) !!}
         {!! Form::text('title', null, ['class' => 'form-control']) !!}
       </div>

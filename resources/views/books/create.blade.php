@@ -14,8 +14,14 @@
     @endif
 
     {!! Form::open([
-      'route' => 'books.store'
+      'route' => 'books.store',
+      'files' => true
     ]) !!}
+      
+      <div class="form-group">
+        {!! Form::file('image') !!}
+        {!!$errors->first('image')!!}
+      </div>
 
       <div class="form-group">
         {!! Form::label('title', 'Title:', ['class' => 'control-label']) !!}
